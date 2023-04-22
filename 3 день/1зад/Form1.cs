@@ -19,16 +19,16 @@ namespace _1зад
                 InitializeComponent();
             }
 
-            private void buttonCalculate_Click(object sender, EventArgs e)
+            private void button1_Click_1(object sender, EventArgs e)
             {
                 int m, n;
-                if (!int.TryParse(textBoxM.Text, out m))
+                if (!int.TryParse(textBox1.Text, out m))
                 {
                     MessageBox.Show("Введите корректное значение m");
                     return;
                 }
 
-                if (!int.TryParse(textBoxN.Text, out n))
+                if (!int.TryParse(textBox2.Text, out n))
                 {
                     MessageBox.Show("Введите корректное значение n");
                     return;
@@ -37,7 +37,7 @@ namespace _1зад
                 int gcd = GCD(m, n);
                 int lcm = m * n / gcd;
 
-                textBoxResult.Text = lcm.ToString();
+                textBox3.Text = lcm.ToString();
             }
 
             private int GCD(int a, int b)
