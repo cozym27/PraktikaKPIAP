@@ -26,7 +26,7 @@ namespace _2зад
                 pictureBoxCanvas.Paint += pictureBoxCanvas_Paint;
             }
 
-            private void buttonScore_Click(object sender, EventArgs e)
+            private void buttonScore_Click_1(object sender, EventArgs e)
             {
                 double x, y;
                 if (!double.TryParse(textBoxX.Text, out x))
