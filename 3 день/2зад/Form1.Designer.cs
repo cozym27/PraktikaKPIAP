@@ -30,7 +30,7 @@
         {
             this.textBoxX = new System.Windows.Forms.TextBox();
             this.textBoxY = new System.Windows.Forms.TextBox();
-            this.buttonScore = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBoxCanvas = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCanvas)).BeginInit();
             this.SuspendLayout();
@@ -49,14 +49,15 @@
             this.textBoxY.Size = new System.Drawing.Size(127, 20);
             this.textBoxY.TabIndex = 1;
             // 
-            // buttonScore
+            // button1
             // 
-            this.buttonScore.Location = new System.Drawing.Point(302, 178);
-            this.buttonScore.Name = "buttonScore";
-            this.buttonScore.Size = new System.Drawing.Size(126, 28);
-            this.buttonScore.TabIndex = 2;
-            this.buttonScore.Text = "button1";
-            this.buttonScore.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(302, 178);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 28);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBoxCanvas
             // 
@@ -72,7 +73,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBoxCanvas);
-            this.Controls.Add(this.buttonScore);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxY);
             this.Controls.Add(this.textBoxX);
             this.Name = "Form1";
@@ -87,7 +88,7 @@
 
         private System.Windows.Forms.TextBox textBoxX;
         private System.Windows.Forms.TextBox textBoxY;
-        private System.Windows.Forms.Button buttonScore;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBoxCanvas;
     }
 }

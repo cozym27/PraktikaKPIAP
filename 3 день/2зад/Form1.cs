@@ -26,24 +26,7 @@ namespace _2зад
                 pictureBoxCanvas.Paint += pictureBoxCanvas_Paint;
             }
 
-            private void buttonScore_Click_1(object sender, EventArgs e)
-            {
-                double x, y;
-                if (!double.TryParse(textBoxX.Text, out x))
-                {
-                    MessageBox.Show("Введите корректное значение координаты x");
-                    return;
-                }
-
-                if (!double.TryParse(textBoxY.Text, out y))
-                {
-                    MessageBox.Show("Введите корректное значение координаты y");
-                    return;
-                }
-
-                int score = GetScore(x, y);
-                MessageBox.Show($"Очков: {score}");
-            }
+        
 
             private int GetScore(double x, double y)
             {
@@ -75,7 +58,28 @@ namespace _2зад
                     e.Graphics.FillEllipse(_circleBrushes[i], x, y, diameter, diameter);
                 }
             }
-        }
+
+        private void button1_Click(object sender, EventArgs e)
+        
+            {
+                double x, y;
+                if (!double.TryParse(textBoxX.Text, out x))
+                {
+                    MessageBox.Show("Введите корректное значение координаты x");
+                    return;
+                }
+
+                if (!double.TryParse(textBoxY.Text, out y))
+                {
+                    MessageBox.Show("Введите корректное значение координаты y");
+                    return;
+                }
+
+                int score = GetScore(x, y);
+                MessageBox.Show($"Очков: {score}");
+            }
+        
+    }
     
 
 }
