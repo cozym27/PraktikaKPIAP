@@ -10,25 +10,22 @@ using System.Windows.Forms;
 
 namespace _1зад
 {
-   
-    
-        public partial class Form1 : Form
+    public partial class Form1 : Form
+    {
+        public Form1()
         {
-            public Form1()
+            InitializeComponent();
+        }
+        private int GCD(int a, int b)
+        {
+            while (b != 0)
             {
-                InitializeComponent();
+                int temp = b;
+                b = a % b;
+                a = temp;
             }
-            private int GCD(int a, int b)
-            {
-                while (b != 0)
-                {
-                    int temp = b;
-                    b = a % b;
-                    a = temp;
-                }
-                return a;
-            }
-
+            return a;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             int m, n;
@@ -37,19 +34,14 @@ namespace _1зад
                 MessageBox.Show("Введите корректное значение m");
                 return;
             }
-
             if (!int.TryParse(textBox2.Text, out n))
             {
                 MessageBox.Show("Введите корректное значение n");
                 return;
             }
-
             int gcd = GCD(m, n);
             int lcm = m * n / gcd;
-
             textBox3.Text = lcm.ToString();
         }
     }
-    
-
 }
